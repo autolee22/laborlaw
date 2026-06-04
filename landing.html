@@ -14,13 +14,8 @@
 
 <nav class="navbar navbar-expand-lg top-nav p-0">
     <div class="container">
-
         <a class="navbar-brand logo-box" href="/">
-            <i class="bi bi-heart-pulse-fill logo-mark"></i>
-            <div class="logo-text">
-                당신의 미소<br>
-                노무법률사무소
-            </div>
+            <img src="./images/logo4.png" alt="로고" class="logo-img">
         </a>
 
         <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
@@ -98,60 +93,86 @@
     </button>
 
 </div>
-
-<section class="service-section">
-    <div class="container">
-        <h2 class="section-title">주요 서비스</h2>
-
-        <div class="row g-4">
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card">
-                    <i class="bi bi-people"></i>
-                    <h5>단체교섭 위임 및 지도</h5>
-                    <p>임금 제도 설계, 근로시간제 개선, 정부 지원 컨설팅</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <h5>인사노무 자문</h5>
-                    <p>급여 아웃소싱, 법률 자문, 징계 및 해고 자문</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card">
-                    <i class="bi bi-person-video3"></i>
-                    <h5>사내교육</h5>
-                    <p>노동법 강의, 인사담당자 교육, 괴롭힘 예방 교육</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card">
-                    <i class="bi bi-hammer"></i>
-                    <h5>노동부 사건</h5>
-                    <p>부당해고, 임금체불, 산재, 근로감독 대응</p>
-                </div>
-            </div>
-
+<div class="service-grid">
+    <div class="service-card">
+        <div class="service-icon">
+            <i class="bi bi-shield-exclamation"></i>
         </div>
+        <h5>괴롭힘·성희롱 사건</h5>
+        <ul>
+            <li>사건 접수 및 대응</li>
+            <li>조사보고서 작성</li>
+            <li>재발 방지 대책</li>
+        </ul>
     </div>
-</section>
+
+        <div class="service-card">
+        <div class="service-icon">
+            <i class="bi bi-briefcase-fill"></i>
+        </div>
+        <h5>노동부 사건</h5>
+        <ul>
+            <li>부당해고 대응</li>
+            <li>임금체불 사건</li>
+            <li>근로감독 대응</li>
+        </ul>
+    </div>
+
+
+    <div class="service-card">
+        <div class="service-icon">
+            <i class="bi bi-people-fill"></i>
+        </div>
+        <h5>단체교섭 위임 및 지도</h5>
+        <ul>
+            <li>임금제도 설계</li>
+            <li>근로시간제 개선</li>
+            <li>정부지원 컨설팅</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">
+            <i class="bi bi-file-earmark-text-fill"></i>
+        </div>
+        <h5>인사노무 자문</h5>
+        <ul>
+            <li>급여 아웃소싱</li>
+            <li>노무 법률 자문</li>
+            <li>징계 및 해고 자문</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">
+            <i class="bi bi-person-video3"></i>
+        </div>
+        <h5>사내교육</h5>
+        <ul>
+            <li>노동법 강의</li>
+            <li>인사담당자 교육</li>
+            <li>괴롭힘 예방 교육</li>
+        </ul>
+    </div>
+</div>
 
 <footer class="footer">
-    <div>
-        <span>대표 설교휘</span>
-        <span>010-4666-5804</span>
-        <span>seolnomusa@naver.com</span>
-        <span>부산 금정구 금강로 271-5, 7층</span>
+
+    <div class="footer-company">
+        <strong>당신의 미소 노무법률사무소</strong>
+    </div>
+
+    <div class="footer-info">
+        <span><strong>대표</strong> 설교휘</span>
+        <span><strong>TEL</strong> 010-4666-5804</span>
+        <span><strong>E-MAIL</strong> seolnomusa@naver.com</span>
+        <span><strong>주소</strong> 부산 금정구 금강로 271-5, 7층</span>
     </div>
 
     <div class="footer-bottom">
-        이용약관　　개인정보처리방침
+        이용약관 | 개인정보처리방침
     </div>
+
 </footer>
 
 <div class="modal fade" id="consultModal" tabindex="-1">
@@ -215,7 +236,7 @@
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/js/main.js"></script>
+<script src="./js/main.js"></script>
 
 </body>
 </html>
