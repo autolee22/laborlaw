@@ -2,21 +2,53 @@ $(function () {
 
     const sliderElement = document.querySelector('#mainSlider');
 
-    const mainSlider = new bootstrap.Carousel(sliderElement, {
-        interval: 4000,
-        ride: 'carousel',
-        wrap: true,
-        pause: false
-    });
+    if (sliderElement) {
+        const mainSlider = new bootstrap.Carousel(sliderElement, {
+            interval: 4000,
+            ride: 'carousel',
+            wrap: true,
+            pause: false
+        });
 
-    $('.carousel-control-prev').on('click', function (e) {
-        e.preventDefault();
-        mainSlider.prev();
-    });
+        $('.carousel-control-prev').on('click', function (e) {
+            e.preventDefault();
+            mainSlider.prev();
+        });
 
-    $('.carousel-control-next').on('click', function (e) {
-        e.preventDefault();
-        mainSlider.next();
+        $('.carousel-control-next').on('click', function (e) {
+            e.preventDefault();
+            mainSlider.next();
+        });
+    }
+
+    // PC: 메뉴에 마우스를 올리면 전체 메가 메뉴 열림, 벗어나면 닫힘
+    const $topNav = $('.top-nav');
+    let megaTimer = null;
+
+    function openMegaMenu() {
+        if (window.innerWidth <= 991) return;
+        clearTimeout(megaTimer);
+        $topNav.addClass('mega-active');
+        $('.mega-trigger .nav-link').addClass('mega-open');
+    }
+
+    function closeMegaMenu() {
+        if (window.innerWidth <= 991) return;
+        megaTimer = setTimeout(function () {
+            $topNav.removeClass('mega-active');
+            $('.mega-trigger .nav-link').removeClass('mega-open');
+        }, 120);
+    }
+
+    $('.mega-trigger, .mega-menu-wrap').on('mouseenter', openMegaMenu);
+    $topNav.on('mouseleave', closeMegaMenu);
+
+    // 모바일: 소개 메뉴 터치 시 메가 메뉴 열고 닫기
+    $('.mega-trigger > .nav-link').on('click', function (e) {
+        if (window.innerWidth <= 991) {
+            e.preventDefault();
+            $topNav.toggleClass('mega-active');
+        }
     });
 
     $('#btnConsultSubmit').on('click', function () {
